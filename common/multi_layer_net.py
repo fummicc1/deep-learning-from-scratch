@@ -3,8 +3,8 @@ import sys, os
 sys.path.append(os.pardir)  # 親ディレクトリのファイルをインポートするための設定
 import numpy as np
 from collections import OrderedDict
-from common.layers import *
-from common.gradient import numerical_gradient
+from layers import *
+from gradient import numerical_gradient
 
 
 class MultiLayerNet:
@@ -156,5 +156,4 @@ class MultiLayerNet:
         for idx in range(1, self.hidden_layer_num+2):
             grads['W' + str(idx)] = self.layers['Affine' + str(idx)].dW + self.weight_decay_lambda * self.layers['Affine' + str(idx)].W
             grads['b' + str(idx)] = self.layers['Affine' + str(idx)].db
-
         return grads
