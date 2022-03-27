@@ -3,7 +3,7 @@ import sys, os
 sys.path.append(os.pardir)  # 親ディレクトリのファイルをインポートするための設定
 import numpy as np
 from collections import OrderedDict
-from layers import *
+from layers import Sigmoid, Relu, Affine, SoftmaxWithLoss
 from gradient import numerical_gradient
 
 
