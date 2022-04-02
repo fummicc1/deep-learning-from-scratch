@@ -4,8 +4,8 @@ sys.path.append(os.pardir)  # 親ディレクトリのファイルをインポ�
 import pickle
 import numpy as np
 from collections import OrderedDict
-from common.layers import *
-from common.gradient import numerical_gradient
+from kit.common.layers import *
+from kit.common.gradient import numerical_gradient
 
 
 class SimpleConvNet:
